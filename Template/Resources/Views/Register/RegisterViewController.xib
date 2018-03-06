@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Template" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollMain" destination="9VZ-bw-ae6" id="EJX-8d-trB"/>
+                <outlet property="txtMail" destination="FIN-gg-gEn" id="fP4-eB-yQM"/>
+                <outlet property="txtPassword" destination="Gca-iF-qnG" id="6Ai-lK-DpI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5gP-da-c7J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bs-mp-5eD">
+                    <rect key="frame" x="50" y="55" width="275" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrE-7Z-IhF">
+                    <rect key="frame" x="16" y="35" width="43" height="30"/>
+                    <state key="normal" title="Volver"/>
+                    <connections>
+                        <action selector="buttonBack" destination="-1" eventType="touchUpInside" id="AIY-hT-NTN"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VZ-bw-ae6">
+                    <rect key="frame" x="0.0" y="99" width="375" height="459"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIN-gg-gEn" customClass="TextField" customModule="Template" customModuleProvider="target">
+                            <rect key="frame" x="50" y="135" width="276" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="276" id="CLV-Io-Tpf"/>
+                                <constraint firstAttribute="height" constant="40" id="To1-1F-ONt"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-iF-qnG" customClass="TextField" customModule="Template" customModuleProvider="target">
+                            <rect key="frame" x="50" y="225" width="276" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="276" id="3Bm-Wl-OaH"/>
+                                <constraint firstAttribute="height" constant="40" id="4Xg-RJ-D2C"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Gca-iF-qnG" firstAttribute="centerX" secondItem="9VZ-bw-ae6" secondAttribute="centerX" id="9vh-oU-dUL"/>
+                        <constraint firstItem="FIN-gg-gEn" firstAttribute="centerX" secondItem="9VZ-bw-ae6" secondAttribute="centerX" id="AKo-1s-KSF"/>
+                        <constraint firstItem="FIN-gg-gEn" firstAttribute="top" secondItem="9VZ-bw-ae6" secondAttribute="top" constant="135" id="CGj-KE-z8M"/>
+                        <constraint firstItem="Gca-iF-qnG" firstAttribute="top" secondItem="FIN-gg-gEn" secondAttribute="bottom" constant="50" id="GX0-US-cYJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Gca-iF-qnG" secondAttribute="bottom" constant="180" id="ZNe-lK-r3t"/>
+                        <constraint firstAttribute="trailing" secondItem="FIN-gg-gEn" secondAttribute="trailing" constant="49" id="aST-pc-kB3"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTD-wg-Yld">
+                    <rect key="frame" x="50" y="588" width="275" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Q7M-X8-mow"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Registrar"/>
+                    <connections>
+                        <action selector="buttonRegister" destination="-1" eventType="touchUpInside" id="oqV-Fp-f9u"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kTD-wg-Yld" firstAttribute="top" secondItem="9VZ-bw-ae6" secondAttribute="bottom" constant="30" id="1WT-Uv-n9A"/>
+                <constraint firstItem="8Bs-mp-5eD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="3jl-WM-4QD"/>
+                <constraint firstItem="kTD-wg-Yld" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="Kds-8k-BJm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Bs-mp-5eD" secondAttribute="trailing" constant="50" id="QdU-er-aKn"/>
+                <constraint firstItem="UrE-7Z-IhF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dY8-3k-TY8"/>
+                <constraint firstItem="UrE-7Z-IhF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="m7e-4i-Gtb"/>
+                <constraint firstItem="9VZ-bw-ae6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oqx-AN-WsM"/>
+                <constraint firstItem="9VZ-bw-ae6" firstAttribute="top" secondItem="8Bs-mp-5eD" secondAttribute="bottom" constant="8" id="pSc-Pm-w2d"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kTD-wg-Yld" secondAttribute="bottom" constant="39" id="tiZ-n9-qMM"/>
+                <constraint firstItem="9VZ-bw-ae6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vB4-JP-GjQ"/>
+                <constraint firstItem="8Bs-mp-5eD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="z6w-lL-s9Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kTD-wg-Yld" secondAttribute="trailing" constant="50" id="zxz-hZ-hFN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

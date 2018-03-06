@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Template
+
+  Created by Erick Alberto Morales Ledesma on 04/03/18.
+  Copyright © 2018 Erick Alberto Morales Ledesma. All rights reserved.
+*/
+//Validations
+"emptyField" = "Este campo es obligatorio.";
+"emptyIncorrect" = "El campo es incorrecto, intenta de nuevo.";
+"mailIncorrect" = "Ingresa un correo electrónico válido.";
+"passwordIncorrect" ="La contraseña debe contener 8 caracteres mínimo.";
