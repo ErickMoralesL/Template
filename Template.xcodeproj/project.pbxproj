@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A74FAE42205854D900BD1A81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FAE40205854D900BD1A81 /* DashboardViewController.swift */; };
+		A74FAE43205854D900BD1A81 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74FAE41205854D900BD1A81 /* DashboardViewController.xib */; };
+		A74FAE462058571800BD1A81 /* ButtonSocialNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */; };
+		A7C8452A2056EF0A0021C668 /* FireBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C845292056EF0A0021C668 /* FireBaseClass.swift */; };
 		C27FE310FEAFC8A67B2D2B6E /* Pods_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F9772212844100B692F632 /* Pods_Template.framework */; };
 		CCA0253B2031336B00A8305D /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA025392031336B00A8305D /* LoginEmailViewController.swift */; };
 		CCA0253C2031336B00A8305D /* LoginEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA0253A2031336B00A8305D /* LoginEmailViewController.xib */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		43076A25AD91BF62262CEB6C /* Pods-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Template/Pods-Template.debug.xcconfig"; sourceTree = "<group>"; };
 		65D56453E7C2E5A748400C2D /* Pods-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.release.xcconfig"; path = "Pods/Target Support Files/Pods-Template/Pods-Template.release.xcconfig"; sourceTree = "<group>"; };
+		A74FAE40205854D900BD1A81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A74FAE41205854D900BD1A81 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSocialNetworks.swift; sourceTree = "<group>"; };
+		A7C845292056EF0A0021C668 /* FireBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FireBaseClass.swift; path = WSCaller/FireBaseClass.swift; sourceTree = "<group>"; };
 		CCA025392031336B00A8305D /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		CCA0253A2031336B00A8305D /* LoginEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginEmailViewController.xib; sourceTree = "<group>"; };
 		CCA0253E2032965B00A8305D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +97,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A74FAE3F205854B600BD1A81 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A74FAE41205854D900BD1A81 /* DashboardViewController.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A74FAE44205854E600BD1A81 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A74FAE40205854D900BD1A81 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		CCA025372031333D00A8305D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +150,11 @@
 		CCA02547203A50AF00A8305D /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				A7C845292056EF0A0021C668 /* FireBaseClass.swift */,
 				CCB04376204CAC30005A7305 /* Utils */,
 				CCB04367204CA1E9005A7305 /* Constans */,
 				CCB04366204CA1DD005A7305 /* UI */,
+				A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */,
 			);
 			path = Bussiness;
 			sourceTree = "<group>";
@@ -199,6 +225,7 @@
 		CCCAFFEB2031191500C39247 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A74FAE44205854E600BD1A81 /* Dashboard */,
 				CCA025402032972000A8305D /* Register */,
 				CCA025372031333D00A8305D /* Login */,
 				CCCAFFED2031193F00C39247 /* MainSlider */,
@@ -237,6 +264,7 @@
 		CCCAFFEF2031196500C39247 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A74FAE3F205854B600BD1A81 /* Dashboard */,
 				CCA0253D2032964300A8305D /* Register */,
 				CCA025382031334800A8305D /* Login */,
 				CCCAFFF12031198700C39247 /* MainSlider */,
@@ -331,6 +359,7 @@
 				CCB04370204CAB57005A7305 /* Localizable.strings in Resources */,
 				CCCAFFE12031160400C39247 /* Assets.xcassets in Resources */,
 				CCCAFFDF2031160400C39247 /* Main.storyboard in Resources */,
+				A74FAE43205854D900BD1A81 /* DashboardViewController.xib in Resources */,
 				CCA0254620329AD200A8305D /* RecoverPasswordViewController.xib in Resources */,
 				CCA025422032974300A8305D /* RegisterViewController.xib in Resources */,
 			);
@@ -345,13 +374,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Template-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2090CF1AE53105AF57A4AD1A /* [CP] Copy Pods Resources */ = {
@@ -360,9 +392,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Template/Pods-Template-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,9 +414,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Template/Pods-Template-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -397,7 +457,10 @@
 				CCB04369204CA20C005A7305 /* Constans.swift in Sources */,
 				CCA0253F2032965B00A8305D /* RegisterViewController.swift in Sources */,
 				CCA02549203A521900A8305D /* TextField.swift in Sources */,
+				A7C8452A2056EF0A0021C668 /* FireBaseClass.swift in Sources */,
+				A74FAE42205854D900BD1A81 /* DashboardViewController.swift in Sources */,
 				CCA0253B2031336B00A8305D /* LoginEmailViewController.swift in Sources */,
+				A74FAE462058571800BD1A81 /* ButtonSocialNetworks.swift in Sources */,
 				CCB0436B204CA259005A7305 /* TextValidations.swift in Sources */,
 				CCCAFFDA2031160400C39247 /* AppDelegate.swift in Sources */,
 				CCCAFFF52031237400C39247 /* MainSliderViewController.swift in Sources */,

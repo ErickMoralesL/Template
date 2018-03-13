@@ -7,20 +7,30 @@
 //
 
 import UIKit
+//import FBSDKCoreKit
+//import FBSDKLoginKit
+import TwitterKit
+import GoogleSignIn
 
-class MainSliderViewController: UIViewController {
+class MainSliderViewController: UIViewController, GIDSignInUIDelegate {
+    
+    @IBOutlet weak var btnLoginEmail: UIButton!
+    @IBOutlet weak var btnRegisterEmail: UIButton!
+    
+    var loginButtonFacebook : UIButton!
+    var logInButtonTwitter : UIButton!
+    var loginButtonGoogle : UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
+        
+        loginButtonFacebook = ButtonSocialNetworks().buttonLoginFacebook(topButton: btnRegisterEmail, view: self.view)
+        logInButtonTwitter = ButtonSocialNetworks().buttonLoginTwitter(topButton: loginButtonFacebook, view: self.view)
+        loginButtonGoogle = ButtonSocialNetworks().buttonLoginGoogle(topButton: logInButtonTwitter, view: self.view)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     //MARK: IBAction
     

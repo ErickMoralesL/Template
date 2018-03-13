@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, FireBaseDelegate {
 
     @IBOutlet weak var txtMail : TextField!
     @IBOutlet weak var txtPassword : TextField!
@@ -30,15 +30,32 @@ class RegisterViewController: UIViewController {
         txtPassword.addViewContent(view: self.view, scroll: scrollMain)
     }
 
+    //MARK: - View Will Layout Subviews
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         scrollMain.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.scrollMain.frame.size.height)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - Fire Base Delegate
+    
+    func onSuccess() {
+        let alertController = UIAlertController(title: "Exito", message: "Usuario reegustrado", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func onError() {
+        let alertController = UIAlertController(title: "Error", message: "Se genero un error al registrar al usuario", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     //MARK: - IBAction
@@ -58,6 +75,10 @@ class RegisterViewController: UIViewController {
         {
             return
         }
+        
+        let fireBaseClass = FireBaseClass()
+        fireBaseClass.delegate = self
+        fireBaseClass.registerUserMail(name: txtMail.text!, password: txtPassword.text!)
     }
     
     @IBAction func buttonBack()

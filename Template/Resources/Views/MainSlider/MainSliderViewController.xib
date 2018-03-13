@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainSliderViewController" customModule="Template" customModuleProvider="target">
             <connections>
+                <outlet property="btnLoginEmail" destination="Dzt-Ho-y0d" id="vJg-r4-lQg"/>
+                <outlet property="btnRegisterEmail" destination="gia-3V-kJ6" id="T9c-0u-L1X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letra_e" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-LE-5LO">
-                    <rect key="frame" x="67" y="124" width="236" height="180"/>
+                    <rect key="frame" x="67" y="110" width="236" height="246"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-Ho-y0d">
-                    <rect key="frame" x="48" y="462" width="278" height="35"/>
+                    <rect key="frame" x="48" y="379" width="278" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="278" id="JhX-5D-yK3"/>
                         <constraint firstAttribute="height" constant="35" id="Tm3-uy-JPn"/>
@@ -35,17 +37,8 @@
                         <action selector="buttonLoginEmail" destination="-1" eventType="touchUpInside" id="rzX-X7-Rhj"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhj-GM-3zv">
-                    <rect key="frame" x="37" y="388" width="300" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="F13-V9-z3P"/>
-                        <constraint firstAttribute="width" constant="300" id="m7B-js-YDR"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="Login con Facebook"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gia-3V-kJ6">
-                    <rect key="frame" x="48" y="536" width="278" height="35"/>
+                    <rect key="frame" x="48" y="433" width="278" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="278" id="axQ-LQ-g2s"/>
                         <constraint firstAttribute="height" constant="35" id="cgq-eP-wo6"/>
@@ -59,17 +52,14 @@
             </subviews>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fhj-GM-3zv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1q7-Ee-7PC"/>
                 <constraint firstItem="gia-3V-kJ6" firstAttribute="leading" secondItem="Dzt-Ho-y0d" secondAttribute="leading" id="6Kp-kq-egJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dMJ-LE-5LO" secondAttribute="trailing" constant="72" id="9mb-0u-0oO"/>
                 <constraint firstItem="dMJ-LE-5LO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="9pQ-GU-fdj"/>
-                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="145.5" id="IfO-sa-Hi7"/>
-                <constraint firstItem="dMJ-LE-5LO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="124" id="ZM5-gw-ptc"/>
-                <constraint firstItem="gia-3V-kJ6" firstAttribute="top" secondItem="Dzt-Ho-y0d" secondAttribute="bottom" constant="39" id="auI-WL-PpU"/>
-                <constraint firstItem="fhj-GM-3zv" firstAttribute="top" secondItem="dMJ-LE-5LO" secondAttribute="bottom" constant="84" id="igT-FH-39Q"/>
-                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="trailing" secondItem="fhj-GM-3zv" secondAttribute="trailing" constant="-11" id="skx-Hx-RiT"/>
+                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ClG-tU-VnE"/>
+                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="63" id="IfO-sa-Hi7"/>
+                <constraint firstItem="dMJ-LE-5LO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="ZM5-gw-ptc"/>
+                <constraint firstItem="gia-3V-kJ6" firstAttribute="top" secondItem="Dzt-Ho-y0d" secondAttribute="bottom" constant="19" id="auI-WL-PpU"/>
                 <constraint firstItem="dMJ-LE-5LO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-2.5" id="wXc-1F-4cp"/>
-                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="top" secondItem="fhj-GM-3zv" secondAttribute="bottom" constant="39" id="yL6-Rt-OSe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="39.5" y="53.5"/>
