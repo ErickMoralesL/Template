@@ -16,9 +16,12 @@ class DashboardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - IBAction
+    
+    @IBAction func buttonMap()
+    {
+        let mapVC = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
+        self.navigationController?.pushViewController(mapVC, animated: true)
     }
 
 }

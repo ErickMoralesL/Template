@@ -17,7 +17,7 @@ class ButtonSocialNetworks: NSObject {
     //Mark: - Button Facebook
     public func buttonLoginFacebook(topButton: UIButton, view: UIView) -> UIButton
     {
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view. 
         let loginButtonFacebook = FBSDKLoginButton()
         // loginButton.center = self.view.center
         loginButtonFacebook.frame = CGRect(x: topButton.frame.origin.x, y: topButton.frame.origin.y + topButton.frame.size.height + 20, width: topButton.frame.size.width, height: topButton.frame.size.height)

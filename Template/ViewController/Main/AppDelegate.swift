@@ -30,8 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
+        #if DEVELOPMENT
+            let TWApiKey = "vbAHBBJX8VWmgHxk8QD9VHa9x"
+            let TWApiScret = "VvdaNDEvj8XcHO2GVMiqQwldxSthBdP6VotkUVJgSwFrTIYxzl"
+        #else
+            let TWApiKey = "3v9ukT9LtIUn0COT8LXW9YxI9"
+            let TWApiScret = "vWnXfc7DMiu9CXb9usMofgzxOEDw7leTXCljjO25R1fU2LabLy"
+        #endif
+        
         //Twitter
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "3v9ukT9LtIUn0COT8LXW9YxI9", consumerSecret: "vWnXfc7DMiu9CXb9usMofgzxOEDw7leTXCljjO25R1fU2LabLy")
+        TWTRTwitter.sharedInstance().start(withConsumerKey: TWApiKey, consumerSecret: TWApiScret)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -71,11 +79,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
+        #if DEVELOPMENT
+            let FBScheme = "fb1463078320469905"
+            let TWScheme = "twitterkit-vbahbbjx8vwmghxk8qd9vha9x"
+        #else
+            let FBScheme = "fb1919057438405293"
+            let TWScheme = "twitterkit-3v9ukt9ltiun0cot8lxw9yxi9"
+        #endif
         
-        if (url.scheme == "twitterkit-3v9ukt9ltiun0cot8lxw9yxi9")
+        if (url.scheme == TWScheme)
         {
             return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
-        }else if (url.scheme == "fb1919057438405293"){
+        }else if (url.scheme == FBScheme){
             let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(app,
                                                                                       open: url,
                                                                                       sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String,

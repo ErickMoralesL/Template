@@ -21,13 +21,13 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1919057438405293</string>
+				<string>fb1463078320469905</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>twitterkit-3v9ukT9LtIUn0COT8LXW9YxI9</string>
+				<string>twitterkit-vbAHBBJX8VWmgHxk8QD9VHa9x</string>
 			</array>
 		</dict>
 		<dict>
@@ -35,14 +35,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.444314394917-uj5m3s7ei2acnu6qiti0krtr152ar5sd</string>
+				<string>com.googleusercontent.apps.416084935374-mssmfj6qfurekaani3ict9dmpe2c027s</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1919057438405293</string>
+	<string>1463078320469905</string>
 	<key>FacebookDisplayName</key>
 	<string>Template</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -56,6 +56,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Se utilizara para geolocalizar al usuario para mapa.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

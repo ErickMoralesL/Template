@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        #if DEVELOPMENT
+            let estado = "Desarrollo"
+        #else
+            let estado = "Produccion"
+        #endif
+        
+        print(estado)
         
         SVProgressHUD.show()
         // Creat Delay
@@ -23,6 +30,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: when) {
             
             let mainSliderVC = MainSliderViewController(nibName: "MainSliderViewController", bundle: Bundle.main)
+            //let mainSliderVC = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
             // Por buenas practicas.
             let transition = CATransition()
             transition.duration = 2

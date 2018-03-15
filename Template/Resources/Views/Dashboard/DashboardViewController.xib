@@ -26,11 +26,45 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVw-Ya-WSl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Template" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-mp-FBW">
+                            <rect key="frame" x="148.5" y="38" width="78.5" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="Lxn-gy-z2l"/>
+                        <constraint firstAttribute="bottom" secondItem="1YQ-mp-FBW" secondAttribute="bottom" constant="14" id="U9S-Bc-mUC"/>
+                        <constraint firstItem="1YQ-mp-FBW" firstAttribute="centerX" secondItem="jVw-Ya-WSl" secondAttribute="centerX" id="d5P-Q9-VAp"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCd-GR-LLA">
+                    <rect key="frame" x="265" y="615" width="94" height="32"/>
+                    <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.53539704623287676" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="PDg-qo-7Ld"/>
+                        <constraint firstAttribute="height" constant="32" id="bkg-7j-hZx"/>
+                    </constraints>
+                    <state key="normal" title="Mapa"/>
+                    <connections>
+                        <action selector="buttonMap" destination="-1" eventType="touchUpInside" id="tCY-tL-T13"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="3LI-4H-oOm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AUJ-qp-Zgk"/>
+                <constraint firstItem="jVw-Ya-WSl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jog-xo-4r5"/>
+                <constraint firstItem="jVw-Ya-WSl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y8W-oF-ptI"/>
                 <constraint firstItem="3LI-4H-oOm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YPj-90-zsh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kCd-GR-LLA" secondAttribute="bottom" constant="20" id="owy-5n-DtS"/>
+                <constraint firstItem="jVw-Ya-WSl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pHo-jW-x6p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kCd-GR-LLA" secondAttribute="trailing" constant="16" id="r4l-Gp-CNc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
