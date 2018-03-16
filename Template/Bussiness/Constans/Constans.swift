@@ -39,3 +39,10 @@ enum FormErrorMessage {
     case FormValid
     case FormPassword
 }
+
+//MARK: - Types FireBase
+
+enum FireBaseType{
+    case FireBaseRegister
+    case FireBaseLogin
+}

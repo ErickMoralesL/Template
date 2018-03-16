@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class LoginEmailViewController: UIViewController, UITextFieldDelegate {
+class LoginEmailViewController: UIViewController, UITextFieldDelegate, FireBaseDelegate {
 
     @IBOutlet weak var txtMail: TextField!
     @IBOutlet weak var txtPassword: TextField!
@@ -37,6 +38,39 @@ class LoginEmailViewController: UIViewController, UITextFieldDelegate {
         mainScroll.contentSize = CGSize(width: UIScreen.main.bounds.width, height: mainScroll.frame.size.height)
     }
     
+    //MARK: Fire Base Delegate
+    
+    func onSuccess(fireBaseType: FireBaseType) {
+        
+        SVProgressHUD.dismiss()
+        
+        if fireBaseType == .FireBaseLogin
+        {
+            let mainSliderVC = DashboardViewController(nibName: "DashboardViewController", bundle: Bundle.main)
+            let transition = CATransition()
+            transition.duration = 2
+            transition.type = kCATransitionFade
+            self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+            
+            self.navigationController?.pushViewController(mainSliderVC, animated: false)
+        }
+    }
+    
+    func onError(fireBaseType: FireBaseType) {
+        
+        SVProgressHUD.dismiss()
+        
+        if fireBaseType == .FireBaseLogin
+        {
+            let alertController = UIAlertController(title: "Error", message: "Se genero un error al iniciar sesión", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     //MARK: IBAction
     
     @IBAction func buttonBack()
@@ -60,7 +94,10 @@ class LoginEmailViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        print("Login");
+        SVProgressHUD.show()
+        let fireBaseClass = FireBaseClass()
+        fireBaseClass.delegate = self
+        fireBaseClass.login(name: txtMail.text!, password: txtPassword.text!)
     }
     
     @IBAction func buttonRegister()

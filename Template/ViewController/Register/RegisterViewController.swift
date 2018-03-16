@@ -41,35 +41,35 @@ class RegisterViewController: UIViewController, FireBaseDelegate {
     
     //MARK: - Fire Base Delegate
     
-    func onSuccess() {
-//        let alertController = UIAlertController(title: "Exito", message: "Usuario reegustrado", preferredStyle: .alert)
-//
-//        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//        alertController.addAction(defaultAction)
-//
-//        present(alertController, animated: true, completion: nil)
-        
-        let mainSliderVC = DashboardViewController(nibName: "DashboardViewController", bundle: Bundle.main)
-        let transition = CATransition()
-        transition.duration = 2
-        transition.type = kCATransitionFade
-        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+    func onSuccess(fireBaseType: FireBaseType) {
         
         SVProgressHUD.dismiss()
         
-        self.navigationController?.pushViewController(mainSliderVC, animated: false)
+        if(fireBaseType == .FireBaseRegister)
+        {
+            let mainSliderVC = DashboardViewController(nibName: "DashboardViewController", bundle: Bundle.main)
+            let transition = CATransition()
+            transition.duration = 2
+            transition.type = kCATransitionFade
+            self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+            
+            self.navigationController?.pushViewController(mainSliderVC, animated: false)
+        }
     }
     
-    func onError() {
+    func onError(fireBaseType: FireBaseType) {
         
         SVProgressHUD.dismiss()
         
-        let alertController = UIAlertController(title: "Error", message: "Se genero un error al registrar al usuario", preferredStyle: .alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        present(alertController, animated: true, completion: nil)
+        if(fireBaseType == .FireBaseRegister)
+        {
+            let alertController = UIAlertController(title: "Error", message: "Se genero un error al registrar al usuario", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     //MARK: - IBAction
