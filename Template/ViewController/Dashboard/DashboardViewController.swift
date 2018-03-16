@@ -23,5 +23,11 @@ class DashboardViewController: UIViewController {
         let mapVC = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
         self.navigationController?.pushViewController(mapVC, animated: true)
     }
+    
+    @IBAction func buttonProfile()
+    {
+        let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: Bundle.main)
+        self.navigationController?.pushViewController(profileVC, animated: true)
+    }
 
 }

@@ -38,6 +38,10 @@
 		A75AD9E0205AD8D200B75BA4 /* RecoverPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA0254420329AD200A8305D /* RecoverPasswordViewController.xib */; };
 		A75AD9E1205AD8D200B75BA4 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E208A12059881D0037379C /* MapViewController.xib */; };
 		A75AD9E2205AD8D200B75BA4 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA025412032974300A8305D /* RegisterViewController.xib */; };
+		A787BF2F205C37ED00EBD99D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A787BF2D205C37ED00EBD99D /* ProfileViewController.swift */; };
+		A787BF30205C37ED00EBD99D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A787BF2D205C37ED00EBD99D /* ProfileViewController.swift */; };
+		A787BF31205C37ED00EBD99D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A787BF2E205C37ED00EBD99D /* ProfileViewController.xib */; };
+		A787BF32205C37ED00EBD99D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A787BF2E205C37ED00EBD99D /* ProfileViewController.xib */; };
 		A7C8452A2056EF0A0021C668 /* FireBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C845292056EF0A0021C668 /* FireBaseClass.swift */; };
 		A7E208A22059881D0037379C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E208A02059881D0037379C /* MapViewController.swift */; };
 		A7E208A32059881D0037379C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E208A12059881D0037379C /* MapViewController.xib */; };
@@ -72,6 +76,8 @@
 		A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSocialNetworks.swift; sourceTree = "<group>"; };
 		A75AD9E8205AD8D200B75BA4 /* Template Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD9E9205AD8D200B75BA4 /* Template Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template Dev-Info.plist"; path = "/Users/erick/Template/Template/Desarrollo/Template Dev-Info.plist"; sourceTree = "<absolute>"; };
+		A787BF2D205C37ED00EBD99D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A787BF2E205C37ED00EBD99D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A7C845292056EF0A0021C668 /* FireBaseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FireBaseClass.swift; path = WSCaller/FireBaseClass.swift; sourceTree = "<group>"; };
 		A7E208A02059881D0037379C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A7E208A12059881D0037379C /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +179,22 @@
 				A74FAE40205854D900BD1A81 /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A787BF2C205C37C400EBD99D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A787BF2E205C37ED00EBD99D /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A787BF33205C37F500EBD99D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A787BF2D205C37ED00EBD99D /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A7E208A4205988400037379C /* Map */ = {
@@ -305,6 +327,7 @@
 		CCCAFFEB2031191500C39247 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A787BF33205C37F500EBD99D /* Profile */,
 				A7E208A5205988490037379C /* Map */,
 				A74FAE44205854E600BD1A81 /* Dashboard */,
 				CCA025402032972000A8305D /* Register */,
@@ -345,6 +368,7 @@
 		CCCAFFEF2031196500C39247 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A787BF2C205C37C400EBD99D /* Profile */,
 				A7E208A4205988400037379C /* Map */,
 				A74FAE3F205854B600BD1A81 /* Dashboard */,
 				CCA0253D2032964300A8305D /* Register */,
@@ -464,6 +488,7 @@
 				A75AD9DC205AD8D200B75BA4 /* Localizable.strings in Resources */,
 				A7093442205AFA0D005794A2 /* GoogleService-Info.plist in Resources */,
 				A75AD9DD205AD8D200B75BA4 /* Assets.xcassets in Resources */,
+				A787BF32205C37ED00EBD99D /* ProfileViewController.xib in Resources */,
 				A75AD9DE205AD8D200B75BA4 /* Main.storyboard in Resources */,
 				A75AD9DF205AD8D200B75BA4 /* DashboardViewController.xib in Resources */,
 				A75AD9E0205AD8D200B75BA4 /* RecoverPasswordViewController.xib in Resources */,
@@ -482,6 +507,7 @@
 				CCB04370204CAB57005A7305 /* Localizable.strings in Resources */,
 				CCCAFFE12031160400C39247 /* Assets.xcassets in Resources */,
 				CCCAFFDF2031160400C39247 /* Main.storyboard in Resources */,
+				A787BF31205C37ED00EBD99D /* ProfileViewController.xib in Resources */,
 				A74FAE43205854D900BD1A81 /* DashboardViewController.xib in Resources */,
 				CCA0254620329AD200A8305D /* RecoverPasswordViewController.xib in Resources */,
 				A7093443205AFA16005794A2 /* GoogleService-Info.plist in Resources */,
@@ -658,6 +684,7 @@
 				A75AD9C9205AD8D200B75BA4 /* Constans.swift in Sources */,
 				A75AD9CA205AD8D200B75BA4 /* RegisterViewController.swift in Sources */,
 				A75AD9CB205AD8D200B75BA4 /* TextField.swift in Sources */,
+				A787BF30205C37ED00EBD99D /* ProfileViewController.swift in Sources */,
 				A75AD9CC205AD8D200B75BA4 /* FireBaseClass.swift in Sources */,
 				A75AD9CD205AD8D200B75BA4 /* DashboardViewController.swift in Sources */,
 				A75AD9CE205AD8D200B75BA4 /* LoginEmailViewController.swift in Sources */,
@@ -680,6 +707,7 @@
 				CCB04369204CA20C005A7305 /* Constans.swift in Sources */,
 				CCA0253F2032965B00A8305D /* RegisterViewController.swift in Sources */,
 				CCA02549203A521900A8305D /* TextField.swift in Sources */,
+				A787BF2F205C37ED00EBD99D /* ProfileViewController.swift in Sources */,
 				A7C8452A2056EF0A0021C668 /* FireBaseClass.swift in Sources */,
 				A74FAE42205854D900BD1A81 /* DashboardViewController.swift in Sources */,
 				CCA0253B2031336B00A8305D /* LoginEmailViewController.swift in Sources */,

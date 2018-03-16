@@ -8,6 +8,8 @@
 
 import UIKit
 import SVProgressHUD
+import GoogleSignIn
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -28,19 +30,29 @@ class ViewController: UIViewController {
         
         let when = DispatchTime.now() + 2 // change 3 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
-            
-            let mainSliderVC = MainSliderViewController(nibName: "MainSliderViewController", bundle: Bundle.main)
-            //let mainSliderVC = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
-            // Por buenas practicas.
-            let transition = CATransition()
-            transition.duration = 2
-            transition.type = kCATransitionFade
-            self.navigationController?.view.layer.add(transition, forKey: kCATransition)
-            
-            SVProgressHUD.dismiss()
-            
-            self.navigationController?.pushViewController(mainSliderVC, animated: false)
+            if Auth.auth().currentUser != nil {
+                // User is signed in.
+                // ...
+                let mainSliderVC = DashboardViewController(nibName: "DashboardViewController", bundle: Bundle.main)
+                self.onTrasition(viewController: mainSliderVC)
+            } else {
+                // No user is signed in.
+                // ...
+                let mainSliderVC = MainSliderViewController(nibName: "MainSliderViewController", bundle: Bundle.main)
+                self.onTrasition(viewController: mainSliderVC)
+            }
         }
+    }
+    
+    private func onTrasition(viewController: UIViewController){
+        let transition = CATransition()
+        transition.duration = 2
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+        
+        SVProgressHUD.dismiss()
+        
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

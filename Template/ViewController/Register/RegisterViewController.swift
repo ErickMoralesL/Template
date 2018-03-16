@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterViewController: UIViewController, FireBaseDelegate {
 
@@ -41,15 +42,28 @@ class RegisterViewController: UIViewController, FireBaseDelegate {
     //MARK: - Fire Base Delegate
     
     func onSuccess() {
-        let alertController = UIAlertController(title: "Exito", message: "Usuario reegustrado", preferredStyle: .alert)
+//        let alertController = UIAlertController(title: "Exito", message: "Usuario reegustrado", preferredStyle: .alert)
+//
+//        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//        alertController.addAction(defaultAction)
+//
+//        present(alertController, animated: true, completion: nil)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(defaultAction)
+        let mainSliderVC = DashboardViewController(nibName: "DashboardViewController", bundle: Bundle.main)
+        let transition = CATransition()
+        transition.duration = 2
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
         
-        present(alertController, animated: true, completion: nil)
+        SVProgressHUD.dismiss()
+        
+        self.navigationController?.pushViewController(mainSliderVC, animated: false)
     }
     
     func onError() {
+        
+        SVProgressHUD.dismiss()
+        
         let alertController = UIAlertController(title: "Error", message: "Se genero un error al registrar al usuario", preferredStyle: .alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -76,6 +90,7 @@ class RegisterViewController: UIViewController, FireBaseDelegate {
             return
         }
         
+        SVProgressHUD.show()
         let fireBaseClass = FireBaseClass()
         fireBaseClass.delegate = self
         fireBaseClass.registerUserMail(name: txtMail.text!, password: txtPassword.text!)

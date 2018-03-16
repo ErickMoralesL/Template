@@ -35,9 +35,23 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ein-nO-uj9">
+                            <rect key="frame" x="299" y="32" width="68" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="nqU-a7-Yx6"/>
+                                <constraint firstAttribute="height" constant="34" id="wMQ-E3-f6x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Perfil"/>
+                            <connections>
+                                <action selector="buttonProfile" destination="-1" eventType="touchUpInside" id="Fbg-40-qYS"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ein-nO-uj9" secondAttribute="trailing" constant="8" id="DOM-QW-axU"/>
+                        <constraint firstAttribute="bottom" secondItem="Ein-nO-uj9" secondAttribute="bottom" constant="9" id="F8h-Sz-Lud"/>
                         <constraint firstAttribute="height" constant="75" id="Lxn-gy-z2l"/>
                         <constraint firstAttribute="bottom" secondItem="1YQ-mp-FBW" secondAttribute="bottom" constant="14" id="U9S-Bc-mUC"/>
                         <constraint firstItem="1YQ-mp-FBW" firstAttribute="centerX" secondItem="jVw-Ya-WSl" secondAttribute="centerX" id="d5P-Q9-VAp"/>
