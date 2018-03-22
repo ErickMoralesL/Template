@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
     
@@ -31,7 +32,7 @@ class ProfileViewController: UIViewController {
     {
         do{
             try Auth.auth().signOut()
-            
+            FBSDKLoginManager().logOut()
             let mainSlider = MainSliderViewController(nibName: "MainSliderViewController", bundle: Bundle.main)
             self.navigationController?.pushViewController(mainSlider, animated: true)
         }catch{

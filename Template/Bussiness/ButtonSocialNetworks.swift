@@ -11,8 +11,16 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import TwitterKit
 import GoogleSignIn
+import FirebaseAuth
 
-class ButtonSocialNetworks: NSObject {
+protocol ButtonSocialNetWorkDelegate {
+    func onSuccessTwitter();
+    func onErrorTwitter();
+}
+
+class ButtonSocialNetworks: NSObject, FireBaseDelegate {
+    
+    var delgate: ButtonSocialNetWorkDelegate?
     
     //Mark: - Button Facebook
     public func buttonLoginFacebook(topButton: UIButton, view: UIView) -> UIButton
@@ -29,11 +37,17 @@ class ButtonSocialNetworks: NSObject {
     //Mark: - Button Twitter
     public func buttonLoginTwitter(topButton: UIButton, view: UIView) -> UIButton
     {
+        let fireBaseClass = FireBaseClass()
+        fireBaseClass.delegate = self
+        
        let logInButtonTwitter = TWTRLogInButton(logInCompletion: { session, error in
             if (session != nil) {
                 print("signed in as \(String(describing: session?.userName))");
+                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
+                fireBaseClass.login(credential: credential)
             } else {
                 print("error: \(String(describing: error?.localizedDescription))");
+                self.delgate?.onErrorTwitter()
             }
         })
         //logInButtonTwitter.center = self.view.center
@@ -52,6 +66,22 @@ class ButtonSocialNetworks: NSObject {
         view.addSubview(loginButtonGoogle)
         
         return loginButtonGoogle
+    }
+    
+    //MARK: - FireBase Delegate
+    
+    func onSuccess(fireBaseType: FireBaseType) {
+        if(fireBaseType == .FireBaseLoginCredential)
+        {
+            self.delgate?.onSuccessTwitter()
+        }
+    }
+    
+    func onError(fireBaseType: FireBaseType) {
+        if(fireBaseType == .FireBaseLoginCredential)
+        {
+            self.delgate?.onErrorTwitter()
+        }
     }
 
 }

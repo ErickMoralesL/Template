@@ -45,4 +45,5 @@ enum FormErrorMessage {
 enum FireBaseType{
     case FireBaseRegister
     case FireBaseLogin
+    case FireBaseLoginCredential
 }

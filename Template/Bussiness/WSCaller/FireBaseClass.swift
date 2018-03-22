@@ -43,4 +43,15 @@ class FireBaseClass: NSObject {
         }
     }
     
+    public func login (credential: AuthCredential)
+    {
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if error == nil
+            {
+                self.delegate?.onSuccess(fireBaseType: FireBaseType.FireBaseLoginCredential)
+            }else{
+                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseLoginCredential)
+            }
+        }
+    }
 }
