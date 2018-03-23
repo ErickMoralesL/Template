@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  Template
 //
@@ -12,10 +12,15 @@ import FBSDKCoreKit
 import TwitterKit
 import GoogleSignIn
 
+protocol AppDelegateGoogleDelegate {
+    func signSucces(user: GIDGoogleUser!, error: Error?);
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
+    var delegate: AppDelegateGoogleDelegate?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -108,21 +113,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     //MARK: - Google Delgate
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
-//        if let error = error {
-//            // ...
-//            return
-//        }
-//        
-//        guard let authentication = user.authentication else { return }
-//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-//                                                       accessToken: authentication.accessToken)
-        // ...
+        self.delegate?.signSucces(user: user, error: error)
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
+        self.delegate?.signSucces(user: user, error: error)
     }
     
 }

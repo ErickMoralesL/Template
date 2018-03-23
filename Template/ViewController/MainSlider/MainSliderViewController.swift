@@ -13,7 +13,7 @@ import TwitterKit
 import GoogleSignIn
 import FirebaseAuth
 
-class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate, FireBaseDelegate, ButtonSocialNetWorkDelegate {
+class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate, FireBaseDelegate, ButtonSocialNetWorkDelegate, AppDelegateGoogleDelegate {
     
     @IBOutlet weak var btnLoginEmail: UIButton!
     @IBOutlet weak var btnRegisterEmail: UIButton!
@@ -21,14 +21,19 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
     var loginButtonFacebook : FBSDKLoginButton!
     var logInButtonTwitter : UIButton!
     var loginButtonGoogle : UIView!
+    let fireBaseClass = FireBaseClass()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fireBaseClass.delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         //GIDSignIn.sharedInstance().signIn()
         
         let buttonSocial = ButtonSocialNetworks()
+        
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.delegate = self
         
         buttonSocial.delgate = self
         loginButtonFacebook = buttonSocial.buttonLoginFacebook(topButton: btnRegisterEmail, view: self.view) as! FBSDKLoginButton
@@ -63,8 +68,6 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
         
         let credentiales = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
         
-        let fireBaseClass = FireBaseClass()
-        fireBaseClass.delegate = self
         fireBaseClass.login(credential: credentiales)
         
     }
@@ -89,6 +92,20 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
         }
     }
     
+    //MARK: - AppDelegate Delagate
+    
+    func signSucces(user: GIDGoogleUser!, error: Error?) {
+        
+        if let error = error {
+            print("\(error)")
+            self.alertError()
+            return
+        }
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
+        fireBaseClass.login(credential: credential)
+    }
     
     //MARK: - IBAction
     

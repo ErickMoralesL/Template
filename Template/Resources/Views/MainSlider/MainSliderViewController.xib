@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letra_e" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-LE-5LO">
-                    <rect key="frame" x="67" y="110" width="236" height="246"/>
+                    <rect key="frame" x="67" y="58" width="236" height="266"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-Ho-y0d">
-                    <rect key="frame" x="48" y="379" width="278" height="35"/>
+                    <rect key="frame" x="48.5" y="346.5" width="278" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="278" id="JhX-5D-yK3"/>
                         <constraint firstAttribute="height" constant="35" id="Tm3-uy-JPn"/>
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gia-3V-kJ6">
-                    <rect key="frame" x="48" y="433" width="278" height="35"/>
+                    <rect key="frame" x="48.5" y="400.5" width="278" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="278" id="axQ-LQ-g2s"/>
                         <constraint firstAttribute="height" constant="35" id="cgq-eP-wo6"/>
@@ -56,8 +56,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dMJ-LE-5LO" secondAttribute="trailing" constant="72" id="9mb-0u-0oO"/>
                 <constraint firstItem="dMJ-LE-5LO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="9pQ-GU-fdj"/>
                 <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ClG-tU-VnE"/>
-                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="63" id="IfO-sa-Hi7"/>
-                <constraint firstItem="dMJ-LE-5LO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="ZM5-gw-ptc"/>
+                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="top" secondItem="dMJ-LE-5LO" secondAttribute="bottom" constant="23" id="Dif-PF-AW4"/>
+                <constraint firstItem="Dzt-Ho-y0d" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="30.5" id="IfO-sa-Hi7"/>
+                <constraint firstItem="dMJ-LE-5LO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="ZM5-gw-ptc"/>
                 <constraint firstItem="gia-3V-kJ6" firstAttribute="top" secondItem="Dzt-Ho-y0d" secondAttribute="bottom" constant="19" id="auI-WL-PpU"/>
                 <constraint firstItem="dMJ-LE-5LO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-2.5" id="wXc-1F-4cp"/>
             </constraints>
