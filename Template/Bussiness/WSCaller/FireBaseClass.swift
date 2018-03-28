@@ -12,7 +12,7 @@ import GoogleSignIn
 
 protocol FireBaseDelegate {
     func onSuccess(fireBaseType: FireBaseType)
-    func onError(fireBaseType: FireBaseType)
+    func onError(fireBaseType: FireBaseType,errorDescription: String)
 }
 
 class FireBaseClass: NSObject {
@@ -26,7 +26,7 @@ class FireBaseClass: NSObject {
             {
                 self.delegate?.onSuccess(fireBaseType: FireBaseType.FireBaseRegister)
             }else{
-                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseRegister)
+                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseRegister, errorDescription: (error?.localizedDescription)!)
             }
         }
     }
@@ -38,7 +38,7 @@ class FireBaseClass: NSObject {
             {
                 self.delegate?.onSuccess(fireBaseType: FireBaseType.FireBaseLogin)
             }else{
-                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseLogin)
+                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseLogin, errorDescription: (error?.localizedDescription)!)
             }
         }
     }
@@ -50,7 +50,7 @@ class FireBaseClass: NSObject {
             {
                 self.delegate?.onSuccess(fireBaseType: FireBaseType.FireBaseLoginCredential)
             }else{
-                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseLoginCredential)
+                self.delegate?.onError(fireBaseType: FireBaseType.FireBaseLoginCredential, errorDescription:  (error?.localizedDescription)!)
             }
         }
     }

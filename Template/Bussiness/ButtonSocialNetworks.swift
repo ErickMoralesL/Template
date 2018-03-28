@@ -77,7 +77,7 @@ class ButtonSocialNetworks: NSObject, FireBaseDelegate {
         }
     }
     
-    func onError(fireBaseType: FireBaseType) {
+    func onError(fireBaseType: FireBaseType, errorDescription: String) {
         if(fireBaseType == .FireBaseLoginCredential)
         {
             self.delgate?.onErrorTwitter()

@@ -13,7 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="Template" customModuleProvider="target">
             <connections>
                 <outlet property="btnAnimation" destination="RaZ-V7-Nj0" id="qLU-rD-gzY"/>
+                <outlet property="btnHello" destination="UNB-9p-ryO" id="Uzf-Zb-ObO"/>
+                <outlet property="btnMap" destination="kCd-GR-LLA" id="eYt-oF-Ol5"/>
+                <outlet property="btnProfile" destination="Ein-nO-uj9" id="7RK-Sm-fpU"/>
                 <outlet property="lblExample" destination="3LI-4H-oOm" id="WJW-J7-eNP"/>
+                <outlet property="lblTemplate" destination="1YQ-mp-FBW" id="gnQ-Ih-xM7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Template" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-mp-FBW">
-                            <rect key="frame" x="148.5" y="38" width="78.5" height="23"/>
+                            <rect key="frame" x="148" y="38" width="79" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -65,30 +69,50 @@
                         <action selector="buttonMap" destination="-1" eventType="touchUpInside" id="tCY-tL-T13"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaZ-V7-Nj0">
-                    <rect key="frame" x="89" y="516" width="113" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaZ-V7-Nj0">
+                    <rect key="frame" x="16" y="617" width="113" height="30"/>
                     <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="113" id="AIC-1W-caR"/>
+                        <constraint firstAttribute="height" constant="30" id="H0h-J1-CX5"/>
+                    </constraints>
                     <state key="normal" title="Animacion"/>
                     <connections>
                         <action selector="buttonAnimation:" destination="-1" eventType="touchUpInside" id="psh-nP-nfG"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LI-4H-oOm">
-                    <rect key="frame" x="104" y="259" width="112" height="51.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LI-4H-oOm">
+                    <rect key="frame" x="131" y="308" width="112" height="52"/>
                     <fontDescription key="fontDescription" type="system" pointSize="43"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNB-9p-ryO">
+                    <rect key="frame" x="120" y="556" width="134" height="30"/>
+                    <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="134" id="2xb-8l-cP7"/>
+                        <constraint firstAttribute="height" constant="30" id="jb7-xP-ryo"/>
+                    </constraints>
+                    <state key="normal" title="Hola Mundo"/>
+                    <connections>
+                        <action selector="helloWorld" destination="-1" eventType="touchUpInside" id="5WV-vx-4fc"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="jVw-Ya-WSl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jog-xo-4r5"/>
+                <constraint firstItem="3LI-4H-oOm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Nmp-wg-Ul5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RaZ-V7-Nj0" secondAttribute="bottom" constant="20" id="Ohe-Up-Qkn"/>
+                <constraint firstItem="RaZ-V7-Nj0" firstAttribute="top" secondItem="UNB-9p-ryO" secondAttribute="bottom" constant="31" id="RYt-aM-TUC"/>
                 <constraint firstItem="jVw-Ya-WSl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y8W-oF-ptI"/>
+                <constraint firstItem="RaZ-V7-Nj0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZdT-Ts-hLU"/>
+                <constraint firstItem="UNB-9p-ryO" firstAttribute="centerX" secondItem="3LI-4H-oOm" secondAttribute="centerX" id="c3t-AC-N9b"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kCd-GR-LLA" secondAttribute="bottom" constant="20" id="owy-5n-DtS"/>
                 <constraint firstItem="jVw-Ya-WSl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pHo-jW-x6p"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kCd-GR-LLA" secondAttribute="trailing" constant="16" id="r4l-Gp-CNc"/>
+                <constraint firstItem="3LI-4H-oOm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wVn-zz-IVb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

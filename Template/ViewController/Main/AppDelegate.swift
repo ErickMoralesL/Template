@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         #if DEVELOPMENT
             let FBScheme = "fb1463078320469905"
-            let TWScheme = "twitterkit-vbahbbjx8vwmghxk8qd9vha9x"
+            let TWScheme = "twitterkit-vbAHBBJX8VWmgHxk8QD9VHa9x"
         #else
             let FBScheme = "fb1919057438405293"
             let TWScheme = "twitterkit-3v9ukt9ltiun0cot8lxw9yxi9"
@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(app,
                                                                                       open: url,
                                                                                       sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String,
-                                                                                      annotation: options[UIApplicationOpenURLOptionsKey.annotation] as! String)
+                                                                                      annotation: options[UIApplicationOpenURLOptionsKey.annotation])
             
              return handled
         }else{

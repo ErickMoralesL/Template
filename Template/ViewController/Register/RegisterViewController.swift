@@ -57,7 +57,7 @@ class RegisterViewController: UIViewController, FireBaseDelegate {
         }
     }
     
-    func onError(fireBaseType: FireBaseType) {
+    func onError(fireBaseType: FireBaseType, errorDescription: String) {
         
         SVProgressHUD.dismiss()
         

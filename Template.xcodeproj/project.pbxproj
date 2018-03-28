@@ -12,6 +12,8 @@
 		A74FAE42205854D900BD1A81 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FAE40205854D900BD1A81 /* DashboardViewController.swift */; };
 		A74FAE43205854D900BD1A81 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74FAE41205854D900BD1A81 /* DashboardViewController.xib */; };
 		A74FAE462058571800BD1A81 /* ButtonSocialNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */; };
+		A755A2D520695865008A01FC /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755A2D420695865008A01FC /* Animations.swift */; };
+		A755A2D620695865008A01FC /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A755A2D420695865008A01FC /* Animations.swift */; };
 		A75AD9C6205AD8D200B75BA4 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0254320329AD200A8305D /* RecoverPasswordViewController.swift */; };
 		A75AD9C7205AD8D200B75BA4 /* ObjectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB04377204CAC4A005A7305 /* ObjectProperties.swift */; };
 		A75AD9C8205AD8D200B75BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCAFFDB2031160400C39247 /* ViewController.swift */; };
@@ -74,6 +76,7 @@
 		A74FAE40205854D900BD1A81 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A74FAE41205854D900BD1A81 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		A74FAE452058571800BD1A81 /* ButtonSocialNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSocialNetworks.swift; sourceTree = "<group>"; };
+		A755A2D420695865008A01FC /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		A75AD9E8205AD8D200B75BA4 /* Template Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD9E9205AD8D200B75BA4 /* Template Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Template Dev-Info.plist"; path = "/Users/erick/Template/Template/Desarrollo/Template Dev-Info.plist"; sourceTree = "<absolute>"; };
 		A787BF2D205C37ED00EBD99D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +184,14 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		A755A2CF2069581E008A01FC /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A755A2D420695865008A01FC /* Animations.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		A787BF2C205C37C400EBD99D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +274,7 @@
 		CCB04366204CA1DD005A7305 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A755A2CF2069581E008A01FC /* Animation */,
 				CCA02548203A521900A8305D /* TextField.swift */,
 				CCB0436A204CA259005A7305 /* TextValidations.swift */,
 			);
@@ -450,10 +462,12 @@
 				ORGANIZATIONNAME = "Erick Alberto Morales Ledesma";
 				TargetAttributes = {
 					A75AD9C3205AD8D200B75BA4 = {
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					CCCAFFD52031160300C39247 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -680,6 +694,7 @@
 			files = (
 				A75AD9C6205AD8D200B75BA4 /* RecoverPasswordViewController.swift in Sources */,
 				A75AD9C7205AD8D200B75BA4 /* ObjectProperties.swift in Sources */,
+				A755A2D620695865008A01FC /* Animations.swift in Sources */,
 				A75AD9C8205AD8D200B75BA4 /* ViewController.swift in Sources */,
 				A75AD9C9205AD8D200B75BA4 /* Constans.swift in Sources */,
 				A75AD9CA205AD8D200B75BA4 /* RegisterViewController.swift in Sources */,
@@ -703,6 +718,7 @@
 			files = (
 				CCA0254520329AD200A8305D /* RecoverPasswordViewController.swift in Sources */,
 				CCB04378204CAC4A005A7305 /* ObjectProperties.swift in Sources */,
+				A755A2D520695865008A01FC /* Animations.swift in Sources */,
 				CCCAFFDC2031160400C39247 /* ViewController.swift in Sources */,
 				CCB04369204CA20C005A7305 /* Constans.swift in Sources */,
 				CCA0253F2032965B00A8305D /* RegisterViewController.swift in Sources */,
@@ -759,6 +775,7 @@
 			baseConfigurationReference = 43076A25AD91BF62262CEB6C /* Pods-Template.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87TEAXQ585;
@@ -779,6 +796,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -789,6 +807,7 @@
 			baseConfigurationReference = 65D56453E7C2E5A748400C2D /* Pods-Template.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87TEAXQ585;
@@ -927,6 +946,7 @@
 			baseConfigurationReference = 43076A25AD91BF62262CEB6C /* Pods-Template.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87TEAXQ585;
@@ -946,6 +966,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -956,6 +977,7 @@
 			baseConfigurationReference = 65D56453E7C2E5A748400C2D /* Pods-Template.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87TEAXQ585;

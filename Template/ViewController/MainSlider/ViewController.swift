@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         SVProgressHUD.show()
         // Creat Delay
         
-        let when = DispatchTime.now() + 2 // change 3 to desired number of seconds
+        let when = DispatchTime.now() + 1 // change 3 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             if Auth.auth().currentUser != nil {
                 // User is signed in.

@@ -21,7 +21,9 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
     var loginButtonFacebook : FBSDKLoginButton!
     var logInButtonTwitter : UIButton!
     var loginButtonGoogle : UIView!
-    let fireBaseClass = FireBaseClass()
+    var fireBaseClass = FireBaseClass()
+    
+    var buttonSocial = ButtonSocialNetworks()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +32,27 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
         GIDSignIn.sharedInstance().uiDelegate = self
         //GIDSignIn.sharedInstance().signIn()
         
-        let buttonSocial = ButtonSocialNetworks()
-        
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.delegate = self
         
         buttonSocial.delgate = self
-        loginButtonFacebook = buttonSocial.buttonLoginFacebook(topButton: btnRegisterEmail, view: self.view) as! FBSDKLoginButton
-        loginButtonFacebook.delegate = self
-        logInButtonTwitter = buttonSocial.buttonLoginTwitter(topButton: loginButtonFacebook, view: self.view)
-        loginButtonGoogle = buttonSocial.buttonLoginGoogle(topButton: logInButtonTwitter, view: self.view)
+        
+    }
+    
+    //MARL: - View Will Appear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let when = DispatchTime.now() + 0// change 3 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.loginButtonFacebook = self.buttonSocial.buttonLoginFacebook(topButton: self.btnRegisterEmail, view: self.view) as! FBSDKLoginButton
+            self.loginButtonFacebook.delegate = self
+            self.logInButtonTwitter = self.buttonSocial.buttonLoginTwitter(topButton: self.loginButtonFacebook, view: self.view)
+            self.loginButtonGoogle = self.buttonSocial.buttonLoginGoogle(topButton: self.logInButtonTwitter, view: self.view)
+            
+            self.view.reloadInputViews()
+        }
     }
     
     //MARK: - Button Social NetWork Delegate
@@ -85,7 +98,7 @@ class MainSliderViewController: UIViewController, GIDSignInUIDelegate, FBSDKLogi
         }
     }
     
-    func onError(fireBaseType: FireBaseType) {
+    func onError(fireBaseType: FireBaseType, errorDescription: String) {
         if fireBaseType == .FireBaseLoginCredential
         {
             self.alertError()

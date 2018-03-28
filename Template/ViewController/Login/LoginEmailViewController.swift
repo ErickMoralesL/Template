@@ -56,7 +56,7 @@ class LoginEmailViewController: UIViewController, UITextFieldDelegate, FireBaseD
         }
     }
     
-    func onError(fireBaseType: FireBaseType) {
+    func onError(fireBaseType: FireBaseType, errorDescription: String) {
         
         SVProgressHUD.dismiss()
         
